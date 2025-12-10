@@ -1,13 +1,13 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 // import { useLanguage } from '@/i18n/LanguageContext';
 // import { LanguageSwitcher } from './LanguageSwitcher';
 // import { ThemeToggle } from './ThemeToggle';
-import { Menu, X } from 'lucide-react';
+import { Menu, X } from "lucide-react";
 
 export const Navbar = () => {
-//   const { t } = useLanguage();
+  //   const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -15,21 +15,21 @@ export const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
-    { href: '#about', label: 'about' },
-    { href: '#skills', label: 'skills' },
-    { href: '#projects', label: 'projects' },
-    { href: '#contact', label: 'contact' },
+    { href: "#about", label: "about" },
+    { href: "#skills", label: "skills" },
+    { href: "#projects", label: "projects" },
+    { href: "#contact", label: "contact" },
   ];
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/80 backdrop-blur-lg border-b border-border shadow-sm' : ''
+        isScrolled ? " backdrop-blur-lg border-b shadow-sm" : ""
       }`}
     >
       <div className="container mx-auto px-6 py-4">
@@ -41,7 +41,11 @@ export const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
-              <a key={link.href} href={link.href} className="nav-link font-medium">
+              <a
+                key={link.href}
+                href={link.href}
+                className="nav-link font-medium"
+              >
                 {link.label}
               </a>
             ))}

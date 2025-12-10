@@ -1,85 +1,138 @@
 // import { useLanguage } from '@/i18n/LanguageContext';
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import AnimatedOrb from "../AnimatedOrb/AnimatedOrb";
 
 export const Hero = () => {
   // const { t } = useLanguage();
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen w-full flex items-center justify-between relative overflow-hidden">
       {/* Background gradient */}
-      <div 
+      {/* <div
         className="absolute inset-0 opacity-60"
-        style={{ background: 'var(--gradient-hero)' }}
-      />
-      
+        style={{ background: "var(--gradient-hero)" }}
+      /> */}
+
       {/* Floating orbs */}
-      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float animation-delay-400" />
+      {/* <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float animation-delay-400" /> */}
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-primary font-medium mb-4 animate-fade-up opacity-0" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
-            Olá, eu sou
-          </p>
-          
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-6 animate-fade-up opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-            <span className="text-gradient">hero.name</span>
-          </h1>
-          
-          <h2 className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground font-display mb-8 animate-fade-up opacity-0" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
-            Desenvolvedor Frontend
-          </h2>
-          
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 animate-fade-up opacity-0" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
-            Crio experiências digitais incríveis com foco em performance, acessibilidade e design moderno.
-          </p>
+      <div>
+        <p
+          className="text-primary font-medium mb-4 animate-fade-up opacity-0"
+          style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}
+        >
+          Olá, eu sou
+        </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-up opacity-0" style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}>
-            <a
-              href="#projects"
-              className="px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:glow transition-all duration-300 hover:scale-105"
-            >
-              hero.cta
-            </a>
-            <a
-              href="#contact"
-              className="px-8 py-4 border border-border text-foreground font-semibold rounded-full hover:bg-secondary transition-all duration-300"
-            >
-              hero.contact
-            </a>
-          </div>
+        <h1
+          className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-6 animate-fade-up opacity-0"
+          style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}
+        >
+          <span className="text-gradient">Juliana Goia</span>
+        </h1>
 
-          {/* Social Links */}
-          <div className="flex items-center justify-center gap-6 animate-fade-up opacity-0" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
-            >
-              <Github size={24} />
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
-            >
-              <Linkedin size={24} />
-            </a>
-            <a
-              href="mailto:email@example.com"
-              className="p-3 rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
-            >
-              <Mail size={24} />
-            </a>
-          </div>
+        <h2
+          className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground font-display mb-8 animate-fade-up opacity-0"
+          style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
+        >
+          Desenvolvedora Frontend
+        </h2>
+
+        <p
+          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 animate-fade-up opacity-0"
+          style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
+        >
+          Crio experiências digitais incríveis com foco em performance,
+          acessibilidade e design moderno.
+        </p>
+        <p
+          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 animate-fade-up opacity-0"
+          style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
+        >
+          Do código ao design, aplico minha experiência em HTML, CSS, JavaScript
+          e UI/UX para criar soluções digitais completas. Busco sempre o
+          equilíbrio entre funcionalidade, estética e experiência, garantindo
+          que cada projeto seja útil e envolvente.
+        </p>
+
+        {/* <div
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-up opacity-0"
+          style={{ animationDelay: "0.5s", animationFillMode: "forwards" }}
+        >
+          <a
+            href="#projects"
+            className="px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:glow transition-all duration-300 hover:scale-105"
+          >
+            hero.cta
+          </a>
+          <a
+            href="#contact"
+            className="px-8 py-4 border border-border text-foreground font-semibold rounded-full hover:bg-secondary transition-all duration-300"
+          >
+            hero.contact
+          </a>
+        </div> */}
+
+        {/* Social Links */}
+        {/* <div
+          className="flex items-center justify-center gap-6 animate-fade-up opacity-0"
+          style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}
+        >
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
+          >
+            <Github size={24} />
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
+          >
+            <Linkedin size={24} />
+          </a>
+          <a
+            href="mailto:email@example.com"
+            className="p-3 rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
+          >
+            <Mail size={24} />
+          </a>
+        </div> */}
+      </div>
+      {/* Right Content - Photo with Orb */}
+      <div
+        className="flex items-center justify-center relative animate-fade-up opacity-0"
+        style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
+      >
+        {/* Animated Orb */}
+        <AnimatedOrb />
+
+        {/* Profile Photo Placeholder */}
+        <div className="relative z-10 w-[280px] h-[350px] md:w-[350px] md:h-[420px] lg:w-[400px] lg:h-[480px]">
+          {/* <div
+                className="w-full h-full rounded-3xl bg-gradient-to-br from-muted to-secondary 
+                           flex items-center justify-center overflow-hidden shadow-2xl"
+              >
+                {/* Replace this div with your actual photo 
+                <div className="text-center p-8">
+                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center">
+                    <span className="text-4xl">📷</span>
+                  </div>
+                  <p className="text-muted-foreground text-sm">
+                    Adicione sua foto aqui
+                  </p>
+                </div>
+              </div> */}
         </div>
+      </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <ArrowDown className="text-muted-foreground" size={24} />
-        </div>
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <ArrowDown className="text-muted-foreground" size={24} />
       </div>
     </section>
   );

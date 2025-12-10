@@ -1,8 +1,55 @@
 @import "tailwindcss";
+/* @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap'); */
+
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --background: 0 0% 98%;
+  --foreground: 222 47% 11%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+
+  --primary: 262 83% 58%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 260 30% 96%;
+  --secondary-foreground: 222 47% 11%;
+
+  --muted: 260 20% 94%;
+  --muted-foreground: 222 20% 45%;
+
+  --accent: 262 83% 58%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 260 20% 88%;
+  --input: 260 20% 88%;
+  --ring: 262 83% 58%;
+
+  --radius: 0.75rem;
+
+  /* Custom tokens */
+  --gradient-hero: linear-gradient(135deg, hsl(262 83% 58% / 0.08) 0%, hsl(0 0% 98%) 50%);
+  --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(260 30% 98%) 100%);
+  --gradient-text: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(280 70% 65%) 100%);
+  --glow-primary: 0 0 60px hsl(262 83% 58% / 0.2);
+  --shadow-card: 0 4px 24px hsl(222 47% 11% / 0.08);
+
+  --sidebar-background: 0 0% 100%;
+  --sidebar-foreground: 222 47% 11%;
+  --sidebar-primary: 262 83% 58%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 260 30% 96%;
+  --sidebar-accent-foreground: 222 47% 11%;
+  --sidebar-border: 260 20% 88%;
+  --sidebar-ring: 262 83% 58%;
 }
 
 @theme inline {
@@ -23,4 +70,271 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+
+.dark {
+  --background: 222 47% 6%;
+  --foreground: 210 40% 98%;
+
+  --card: 222 47% 8%;
+  --card-foreground: 210 40% 98%;
+
+  --popover: 222 47% 8%;
+  --popover-foreground: 210 40% 98%;
+
+  --primary: 262 83% 65%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 222 47% 12%;
+  --secondary-foreground: 210 40% 98%;
+
+  --muted: 222 47% 14%;
+  --muted-foreground: 215 20% 55%;
+
+  --accent: 262 83% 65%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 222 47% 16%;
+  --input: 222 47% 16%;
+  --ring: 262 83% 65%;
+
+  /* Dark mode custom tokens */
+  --gradient-hero: linear-gradient(135deg, hsl(262 83% 65% / 0.15) 0%, hsl(222 47% 6%) 50%);
+  --gradient-card: linear-gradient(145deg, hsl(222 47% 10%) 0%, hsl(222 47% 8%) 100%);
+  --gradient-text: linear-gradient(135deg, hsl(262 83% 65%) 0%, hsl(280 70% 75%) 100%);
+  --glow-primary: 0 0 60px hsl(262 83% 65% / 0.3);
+  --shadow-card: 0 4px 24px hsl(222 47% 4% / 0.5);
+
+  --sidebar-background: 222 47% 8%;
+  --sidebar-foreground: 210 40% 98%;
+  --sidebar-primary: 262 83% 65%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 222 47% 14%;
+  --sidebar-accent-foreground: 210 40% 98%;
+  --sidebar-border: 222 47% 16%;
+  --sidebar-ring: 262 83% 65%;
+}
+
+/* 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans antialiased transition-colors duration-300;
+  }
+  */
+
+/* @layer utilities {
+  .text-gradient {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow {
+    box-shadow: var(--glow-primary);
+  }
+
+  .card-gradient {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-card);
+  }
+} */
+
+/* @layer components {
+  .nav-link {
+    @apply relative text-muted-foreground transition-colors duration-300 hover:text-foreground;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 h-0.5 w-0 bg-primary transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-display font-bold mb-8;
+  }
+} */
+
+/* Scroll Reveal Animations */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.6s ease-out forwards;
+}
+
+/* Scroll Reveal Classes */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-reveal-scale.revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.animation-delay-100 {
+  transition-delay: 100ms;
+}
+
+.animation-delay-200 {
+  transition-delay: 200ms;
+}
+
+.animation-delay-300 {
+  transition-delay: 300ms;
+}
+
+.animation-delay-400 {
+  transition-delay: 400ms;
+}
+
+.animation-delay-500 {
+  transition-delay: 500ms;
+}
+
+.animation-delay-600 {
+  transition-delay: 600ms;
 }

@@ -6,7 +6,7 @@ export const Hero = () => {
   // const { t } = useLanguage();
 
   return (
-    <section className="min-h-screen w-full flex items-center justify-between relative overflow-hidden">
+    <section className="grid md:grid-cols-2 items-center gap-6 min-h-screen w-full relative overflow-hidden">
       {/* Background gradient */}
       {/* <div
         className="absolute inset-0 opacity-60"

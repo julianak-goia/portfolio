@@ -1,5 +1,6 @@
 "use client";
 // import { useLanguage } from '@/i18n/LanguageContext';
+import Image from "next/image";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { ExternalLink, Github, Folder } from "lucide-react";
 
@@ -14,6 +15,7 @@ const projects = [
     tech: ["React", "JavaScript", "Tailwind", "Node.js"],
     github: "https://github.com",
     live: "https://example.com",
+    image: "/images/lean.png",
   },
   {
     title: "Task Management App",
@@ -25,6 +27,7 @@ const projects = [
     tech: ["React", "Redux", "Socket.io", "MongoDB"],
     github: "https://github.com",
     live: "https://example.com",
+    image: "/images/teya.png",
   },
   {
     title: "Weather Dashboard",
@@ -36,6 +39,7 @@ const projects = [
     tech: ["Next.js", "JavaScript", "Chart.js", "API"],
     github: "https://github.com",
     live: "https://example.com",
+    image: "/images/figa.png",
   },
   {
     title: "Social Media Clone",
@@ -47,6 +51,7 @@ const projects = [
     tech: ["React", "Firebase", "Tailwind", "Zustand"],
     github: "https://github.com",
     live: "https://example.com",
+    image: "/images/gradient4.png",
   },
 ];
 
@@ -113,31 +118,63 @@ export const Projects = () => {
 
   return (
     <section id="projects" className="py-24 w-full">
-      <div className="container mx-auto px-6">
-        <div className="max-w-5xl mx-auto">
-          <div
-            ref={titleRef}
-            className={`text-center scroll-reveal ${
-              titleRevealed ? "revealed" : ""
-            }`}
-          >
-            <h2 className="section-title">
-              <span className="text-gradient">projects.title</span>
-            </h2>
-            <p className="text-muted-foreground mb-12">projects.subtitle</p>
-          </div>
+      <div
+        ref={titleRef}
+        className={`text-center scroll-reveal ${
+          titleRevealed ? "revealed" : ""
+        }`}
+      >
+        <h2 className="section-title">
+          <span className="text-gradient">Projetos</span>
+        </h2>
+        <p className="text-muted-foreground mb-12">
+          Alguns dos trabalhos que desenvolvi
+        </p>
+      </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {projects.map((project, index) => (
-              <ProjectCard
-                key={project.title}
-                project={project}
-                // language={language}
-                index={index}
-              />
-            ))}
-          </div>
-        </div>
+      <div className="grid md:grid-cols-1 gap-6 space-y-40">
+        {projects.map((project, index) => (
+          <>
+            <div key={project.title} className="grid md:grid-cols-2 gap-6">
+              {index % 2 === 0 ? (
+                <>
+                  {/* <ProjectCard
+                      project={project}
+                      // language={language}
+                      index={index}
+                    /> */}
+                  <div className="relative mx-auto w-full h-[570px] rounded-2xl overflow-hidden shadow-md">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover p-4"
+                    />
+                  </div>
+
+                  <p>texto</p>
+                </>
+              ) : (
+                <>
+                  <p>texto</p>
+                  <div className="relative mx-auto w-full h-[570px] rounded-2xl overflow-hidden">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  {/* <ProjectCard
+                      project={project}
+                      // language={language}
+                      index={index}
+                    /> */}
+                </>
+              )}
+            </div>
+          </>
+        ))}
       </div>
     </section>
   );

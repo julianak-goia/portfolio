@@ -15,43 +15,43 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const projects = [
   {
-    title: "E-commerce Platform",
+    title: "Lean Learn",
     description: {
-      pt: "Plataforma completa de e-commerce com carrinho, pagamentos e dashboard admin.",
-      en: "Complete e-commerce platform with cart, payments, and admin dashboard.",
-      ja: "カート、決済、管理ダッシュボードを備えた完全なeコマースプラットフォーム。",
+      pt: "Plataforma LMS (Learning Management System). Permite a empresas e instituições de ensino criar, gerenciar, distribuir e monitorar cursos e treinamentos online. Essa plataforma digital organiza o conteúdo educacional, facilita o acesso dos alunos, permite aplicar avaliações, emitir certificados e acompanhar o progresso e desempenho dos usuários.",
+      en: "LMS Platform (Learning Management System).It allows companies and educational institutions to create, manage, distribute, and monitor online courses and training programs. This digital platform organizes educational content, facilitates student access, enables the application of assessments, issues certificates, and tracks users’ progress and performance.",
+      ja: "LMSプラットフォーム（Learning Management System／学習管理システム）。企業や教育機関がオンラインコースや研修を作成・管理・配信・監視できるしくみです。 このデジタルプラットフォームは教育コンテンツを整理し、学習者のアクセスを容易にし、テストの実施、証明書の発行、ユーザーの進捗やパフォーマンスの確認を可能にします。",
     },
-    tech: ["React", "JavaScript", "Tailwind", "Node.js"],
+    tech: ["Vue.js", "Nuxt.js", "JavaScript", "Bootstrap", "Laravel"],
     github: "https://github.com",
     live: "https://example.com",
-    image: "/images/lean-learn.png",
+    image: "/images/lean-responsive.jpg",
   },
   {
-    title: "Task Management App",
+    title: "Teya✱",
     description: {
-      pt: "Aplicativo de gerenciamento de tarefas com drag and drop e colaboração em tempo real.",
-      en: "Task management app with drag and drop and real-time collaboration.",
-      ja: "ドラッグアンドドロップとリアルタイムコラボレーションを備えたタスク管理アプリ。",
+      pt: "Site para a empresa Teya, uma plataforma que enfatiza cultura de aprendizagem contínua, conectando pessoas, ideias, conteúdos e ferramentas para cocriar soluções inovadoras para indivíduos e empresas.",
+      en: "Website for Teya, a platform that emphasizes a culture of continuous learning, connecting people, ideas, content, and tools to co-create innovative solutions for individuals and companies.",
+      ja: "テヤの企業サイトです。テヤは、継続的な学習文化を重視し、人やアイデア、コンテンツ、ツールをつなげて、個人や企業のために革新的なソリューションを共創するプラットフォームです。",
     },
-    tech: ["React", "Redux", "Socket.io", "MongoDB"],
+    tech: ["HTML", "Javascript", "CSS", "PHP"],
     github: "https://github.com",
     live: "https://example.com",
     image: "/images/teyaus.png",
   },
   {
-    title: "Weather Dashboard",
+    title: "Figa Marcenaria",
     description: {
-      pt: "Dashboard de previsão do tempo com gráficos interativos e geolocalização.",
-      en: "Weather forecast dashboard with interactive charts and geolocation.",
-      ja: "インタラクティブなチャートと位置情報を備えた天気予報ダッシュボード。",
+      pt: "Site para a empresa que faz projetos e fabricação de móveis e artigos de decoração.",
+      en: "Website for a company that designs and manufactures furniture and décor items.",
+      ja: "家具やインテリア雑貨の設計・製造を行う会社のウェブサイトです。",
     },
-    tech: ["Next.js", "JavaScript", "Chart.js", "API"],
+    tech: ["HTML", "Javascript", "CSS", "PHP"],
     github: "https://github.com",
     live: "https://example.com",
     image: "/images/figa-marcenaria.png",
   },
   {
-    title: "Social Media Clone",
+    title: "Viatech",
     description: {
       pt: "Clone de rede social com feed, posts, likes e sistema de seguir.",
       en: "Social media clone with feed, posts, likes, and follow system.",
@@ -60,7 +60,7 @@ const projects = [
     tech: ["React", "Firebase", "Tailwind", "Zustand"],
     github: "https://github.com",
     live: "https://example.com",
-    image: "/images/gradient4.png",
+    image: "/images/viatech-ipad.png",
   },
 ];
 

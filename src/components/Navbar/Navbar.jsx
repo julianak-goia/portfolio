@@ -32,7 +32,7 @@ export const Navbar = () => {
         isScrolled ? " backdrop-blur-lg border-b shadow-sm" : ""
       }`}
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="max-w-6xl mx-auto py-4">
         <div className="flex items-center justify-between">
           <a href="#" className="text-2xl font-display font-bold text-gradient">
             Portfolio

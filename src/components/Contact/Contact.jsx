@@ -1,13 +1,26 @@
 "use client";
 
 // import { useLanguage } from '@/i18n/LanguageContext';
+import Link from "next/link";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Mail, Github, Linkedin, Twitter, Send } from "lucide-react";
+import { GithubLogo, LinkedinLogo, EnvelopeSimple } from "phosphor-react";
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+  {
+    icon: GithubLogo,
+    href: "https://github.com/julianak-goia",
+    label: "GitHub",
+  },
+  {
+    icon: LinkedinLogo,
+    href: "https://www.linkedin.com/in/juliana-goia/",
+    label: "LinkedIn",
+  },
+  {
+    icon: EnvelopeSimple,
+    href: "mailto:goia.julianakg@gmail.com",
+    label: "Twitter",
+  },
 ];
 
 export const Contact = () => {
@@ -25,7 +38,9 @@ export const Contact = () => {
             className={`scroll-reveal ${titleRevealed ? "revealed" : ""}`}
           >
             <h2 className="section-title">
-              <span className="text-gradient">Contato</span>
+              <span className="text-gradient font-semibold text-3xl">
+                Contato
+              </span>
             </h2>
             <p className="text-xl text-muted-foreground mb-4">
               Vamos trabalhar juntos?
@@ -33,39 +48,41 @@ export const Contact = () => {
           </div>
 
           {/* Email CTA */}
-          <div
+          {/* <div
             ref={ctaRef}
             className={`scroll-reveal-scale ${ctaRevealed ? "revealed" : ""}`}
           >
             <a
-              href="mailto:seuemail@example.com"
+              href="mailto:goia.julianakg@gmail.com"
               className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:glow transition-all duration-300 hover:scale-105 mb-12"
             >
               <Mail size={20} />
-              <span>seuemail@example.com</span>
+              <span>goia.julianakg@gmail.com</span>
               <Send size={18} />
             </a>
-          </div>
+          </div> */}
 
           {/* Social Links */}
           <div
             ref={socialRef}
             className={`scroll-reveal ${socialRevealed ? "revealed" : ""}`}
           >
-            <p className="text-sm text-muted-foreground mb-4">contact.social</p>
             <div className="flex items-center justify-center gap-4">
               {socialLinks.map((social, index) => (
-                <a
+                <Link
                   key={social.label}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary hover:glow transition-all duration-300"
                   aria-label={social.label}
-                  style={{ transitionDelay: `${index * 100}ms` }}
                 >
-                  <social.icon size={24} />
-                </a>
+                  <div
+                    className="p-4 rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary hover:glow transition-all duration-300"
+                    style={{ transitionDelay: `${index * 100}ms` }}
+                  >
+                    <social.icon size={24} />
+                  </div>
+                </Link>
               ))}
             </div>
           </div>

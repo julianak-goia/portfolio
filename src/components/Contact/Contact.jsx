@@ -17,7 +17,7 @@ export const Contact = () => {
   const { ref: socialRef, isRevealed: socialRevealed } = useScrollReveal();
 
   return (
-    <section id="contact" className="py-24 w-full bg-secondary/30">
+    <section id="contact" className="py-24 container">
       <div className="container mx-auto px-6">
         <div className="max-w-2xl mx-auto text-center">
           <div
@@ -25,12 +25,11 @@ export const Contact = () => {
             className={`scroll-reveal ${titleRevealed ? "revealed" : ""}`}
           >
             <h2 className="section-title">
-              <span className="text-gradient">contact.title</span>
+              <span className="text-gradient">Contato</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-4">
-              contact.subtitle
+              Vamos trabalhar juntos?
             </p>
-            <p className="text-muted-foreground mb-12">contact.description</p>
           </div>
 
           {/* Email CTA */}

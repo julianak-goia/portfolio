@@ -9,12 +9,17 @@ export const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Portfolio. footer.rights
+            © {currentYear} Portfolio. Todos os direitos reservados
           </p>
           <p className="text-sm text-muted-foreground">
+            Projetado com <span className="text-primary">♥</span> utilizando
+            React & JavaScript
+          </p>
+
+          {/* <p className="text-sm text-muted-foreground">
             Built with <span className="text-primary">♥</span> using React &
             JavaScript
-          </p>
+          </p> */}
         </div>
       </div>
     </footer>

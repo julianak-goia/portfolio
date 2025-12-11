@@ -10,7 +10,7 @@ import "@radix-ui/themes/styles.css";
 export default function Home() {
   return (
     // container mx-auto
-    <div className="flex flex-col min-h-screen items-center justify-center container mx-auto">
+    <div className="flex flex-col min-h-screen items-center justify-center">
       {/* <main className="flex min-h-screen w-full max-w-6xl flex-col items-center justify-between py-32 px-16 sm:items-start ">
          </main> */}
       <Navbar />

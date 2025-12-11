@@ -3,6 +3,7 @@
 // import { useLanguage } from '@/i18n/LanguageContext';
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Code2, Palette, Zap } from "lucide-react";
+import Image from "next/image";
 
 export const About = () => {
   //   const { t } = useLanguage();
@@ -17,65 +18,105 @@ export const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24 relative">
-      <h2
+    <section id="about" className="container py-24 relative">
+      {/* <h2
         ref={titleRef}
         className={`section-title text-center scroll-reveal ${
           titleRevealed ? "revealed" : ""
         }`}
       >
         <span className="text-gradient">Sobre mim</span>
-      </h2>
+      </h2> */}
 
-      <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="grid md:grid-cols-12 gap-30 items-center">
         {/* Image/Avatar placeholder */}
         <div
           ref={imageRef}
-          className={`relative scroll-reveal-left ${
+          className={`relative scroll-reveal-left col-span-4 ${
             imageRevealed ? "revealed" : ""
           }`}
         >
-          <div className="aspect-square rounded-2xl card-gradient border border-border overflow-hidden">
-            <div className="w-full h-full bg-gradient-to-br from-primary/10 to-transparent flex items-center justify-center">
-              <div className="w-30 h-30 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center">
-                <Code2 size={64} className="text-primary" />
-              </div>
+          <div className="w-[500px] h-[700px] rounded-2xl">
+            <div className="relative w-full h-full">
+              <Image
+                src="/images/juliana.jpg"
+                alt="profile"
+                fill
+                className="object-cover rounded-2xl "
+              />
             </div>
           </div>
-          {/* Decorative elements */}
-          <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl" />
-          <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
         </div>
 
         {/* Text content */}
         <div
           ref={textRef}
-          className={`space-y-6 scroll-reveal-right ${
+          className={`space-y-6 scroll-reveal-right col-span-8 ${
             textRevealed ? "revealed" : ""
           }`}
         >
+          <h3 className="font-semibold text-xl">Muito prazer</h3>
+          <div>
+            <h1 className="text-3xl font-semibold">Juliana Kaori Goia</h1>
+            <p className="text-lg">Desenvolvedora front-end</p>
+          </div>
+
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Sou um desenvolvedor frontend apaixonado por criar interfaces
-            bonitas e funcionais. Com experiência em React, JavaScript e as mais
-            modernas tecnologias web, transformo ideias em realidade digital.
-          </p>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            Minha jornada no desenvolvimento começou há alguns anos, e desde
-            então venho aprimorando minhas habilidades constantemente. Acredito
-            que um bom código é aquele que é limpo, eficiente e fácil de manter.
-          </p>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            Estudo Sistemas de Informação e atuo há 1 ano com Front-end e UI/UX
-            Design. Minha experiência me permite unir código e design para
-            transformar ideias em interfaces digitais eficientes, claras e
-            responsivas. Tenho como foco evoluir continuamente meus processos e
-            conhecimentos em tecnologias como React e Next.js, sempre com o
-            objetivo de criar soluções que fortalecem a presença digital de
-            marcas e negócios.
+            Atuo há 4 anos como desenvolvedora frontend apaixonada por criar
+            interfaces bonitas e funcionais. Com experiência em React, Vue.js,
+            JavaScript e outras tecnologias, transformo ideias em realidade
+            digital.
           </p>
 
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Atualmente estudo Análise e Desenvolvimento de Sistemas e também me
+            dedico à área de UI/UX Design, que complemento com estudos
+            independentes. Essa combinação de código e design me permite
+            transformar ideias em experiências digitais claras, responsivas e
+            bem estruturadas. Meu foco é evoluir continuamente, aprofundando
+            meus conhecimentos em código e design para criar soluções que
+            fortalecem a presença digital de marcas e negócios.
+          </p>
+
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              stroke-linecap="round"
+              strokeLinejoin="round"
+              className="lucide lucide-github-icon lucide-github"
+            >
+              <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+              <path d="M9 18c-4.51 2-5-2-7-2" />
+            </svg>
+          </div>
+
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="lucide lucide-linkedin-icon lucide-linkedin"
+            >
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect width="4" height="12" x="2" y="9" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </div>
+
           {/* Highlights */}
-          <div className="grid grid-cols-3 gap-4 pt-6">
+          {/* <div className="grid grid-cols-3 gap-4 pt-6">
             {highlights.map((item, index) => (
               <div
                 key={index}
@@ -87,7 +128,7 @@ export const About = () => {
                 </span>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

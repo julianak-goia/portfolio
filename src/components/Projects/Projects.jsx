@@ -64,62 +64,62 @@ const projects = [
   },
 ];
 
-const ProjectCard = ({ project, language, index }) => {
-  const { ref, isRevealed } = useScrollReveal({ threshold: 0.1 });
+// const ProjectCard = ({ project, language, index }) => {
+//   const { ref, isRevealed } = useScrollReveal({ threshold: 0.1 });
 
-  return (
-    <article
-      ref={ref}
-      className={`group p-6 rounded-2xl card-gradient border border-border hover:border-primary/50 transition-all duration-300 scroll-reveal ${
-        isRevealed ? "revealed" : ""
-      }`}
-      style={{ transitionDelay: `${index * 100}ms` }}
-    >
-      <div className="flex items-start justify-between mb-4">
-        <Folder className="text-primary" size={40} />
-        <div className="flex gap-3">
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-primary transition-colors"
-            aria-label="GitHub"
-          >
-            <Github size={20} />
-          </a>
-          <a
-            href={project.live}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-primary transition-colors"
-            aria-label="Live demo"
-          >
-            <ExternalLink size={20} />
-          </a>
-        </div>
-      </div>
+//   return (
+//     <article
+//       ref={ref}
+//       className={`group p-6 rounded-2xl card-gradient border border-border hover:border-primary/50 transition-all duration-300 scroll-reveal ${
+//         isRevealed ? "revealed" : ""
+//       }`}
+//       style={{ transitionDelay: `${index * 100}ms` }}
+//     >
+//       <div className="flex items-start justify-between mb-4">
+//         <Folder className="text-primary" size={40} />
+//         <div className="flex gap-3">
+//           <a
+//             href={project.github}
+//             target="_blank"
+//             rel="noopener noreferrer"
+//             className="text-muted-foreground hover:text-primary transition-colors"
+//             aria-label="GitHub"
+//           >
+//             <Github size={20} />
+//           </a>
+//           <a
+//             href={project.live}
+//             target="_blank"
+//             rel="noopener noreferrer"
+//             className="text-muted-foreground hover:text-primary transition-colors"
+//             aria-label="Live demo"
+//           >
+//             <ExternalLink size={20} />
+//           </a>
+//         </div>
+//       </div>
 
-      <h3 className="text-xl font-display font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
-        {project.title}
-      </h3>
+//       <h3 className="text-xl font-display font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+//         {project.title}
+//       </h3>
 
-      <p className="text-muted-foreground mb-6 leading-relaxed">
-        {project.description[language]}
-      </p>
+//       <p className="text-muted-foreground mb-6 leading-relaxed">
+//         {project.description[language]}
+//       </p>
 
-      <div className="flex flex-wrap gap-2">
-        {project.tech.map((tech) => (
-          <span
-            key={tech}
-            className="px-3 py-1 text-xs font-medium text-primary bg-primary/10 rounded-full"
-          >
-            {tech}
-          </span>
-        ))}
-      </div>
-    </article>
-  );
-};
+//       <div className="flex flex-wrap gap-2">
+//         {project.tech.map((tech) => (
+//           <span
+//             key={tech}
+//             className="px-3 py-1 text-xs font-medium text-primary bg-primary/10 rounded-full"
+//           >
+//             {tech}
+//           </span>
+//         ))}
+//       </div>
+//     </article>
+//   );
+// };
 
 export const Projects = () => {
   //   const { t, language } = useLanguage();
@@ -127,7 +127,7 @@ export const Projects = () => {
   const { ref: titleRef, isRevealed: titleRevealed } = useScrollReveal();
 
   return (
-    <section id="projects" className="py-24 w-full">
+    <section id="projects" className="container py-24 w-full">
       <div
         ref={titleRef}
         className={`text-center scroll-reveal ${
@@ -135,10 +135,10 @@ export const Projects = () => {
         }`}
       >
         <h2 className="section-title">
-          <span className="text-gradient">Projetos</span>
+          <span className="font-semibold text-3xl">Projetos</span>
         </h2>
-        <p className="text-muted-foreground mb-12">
-          Alguns dos trabalhos que desenvolvi
+        <p className="text-lg text-muted-foreground leading-relaxed mb-12">
+          Alguns trabalhos que participei
         </p>
       </div>
 

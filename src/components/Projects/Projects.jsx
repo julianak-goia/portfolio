@@ -1,8 +1,17 @@
 "use client";
 // import { useLanguage } from '@/i18n/LanguageContext';
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { ExternalLink, Github, Folder } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Card, CardContent } from "@/components/ui/card";
 
 const projects = [
   {
@@ -15,7 +24,7 @@ const projects = [
     tech: ["React", "JavaScript", "Tailwind", "Node.js"],
     github: "https://github.com",
     live: "https://example.com",
-    image: "/images/lean.png",
+    image: "/images/lean-learn.png",
   },
   {
     title: "Task Management App",
@@ -27,7 +36,7 @@ const projects = [
     tech: ["React", "Redux", "Socket.io", "MongoDB"],
     github: "https://github.com",
     live: "https://example.com",
-    image: "/images/teya.png",
+    image: "/images/teyaus.png",
   },
   {
     title: "Weather Dashboard",
@@ -39,7 +48,7 @@ const projects = [
     tech: ["Next.js", "JavaScript", "Chart.js", "API"],
     github: "https://github.com",
     live: "https://example.com",
-    image: "/images/figa.png",
+    image: "/images/figa-marcenaria.png",
   },
   {
     title: "Social Media Clone",
@@ -114,6 +123,7 @@ const ProjectCard = ({ project, language, index }) => {
 
 export const Projects = () => {
   //   const { t, language } = useLanguage();
+
   const { ref: titleRef, isRevealed: titleRevealed } = useScrollReveal();
 
   return (
@@ -132,50 +142,58 @@ export const Projects = () => {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-1 gap-6 space-y-40">
-        {projects.map((project, index) => (
-          <>
-            <div key={project.title} className="grid md:grid-cols-2 gap-6">
-              {index % 2 === 0 ? (
-                <>
-                  {/* <ProjectCard
-                      project={project}
-                      // language={language}
-                      index={index}
-                    /> */}
-                  <div className="relative mx-auto w-full h-[570px] rounded-2xl overflow-hidden shadow-md">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-cover p-4"
-                    />
-                  </div>
+      {/* carousel */}
 
-                  <p>texto</p>
-                </>
-              ) : (
-                <>
-                  <p>texto</p>
-                  <div className="relative mx-auto w-full h-[570px] rounded-2xl overflow-hidden">
+      <Carousel className="w-full max-w-5xl mx-auto">
+        <CarouselContent>
+          {projects.map((project) => (
+            <CarouselItem key={project.title}>
+              <div className="p-1">
+                <Card className="p-6 border-0 shadow-md">
+                  <CardContent className="relative h-[600px] p-0">
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
-                      className="object-cover"
+                      className="object-contain rounded-2xl"
                     />
+                  </CardContent>
+                  <h3 className="text-xl font-display font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                    {project.title}
+                  </h3>
+
+                  {/* <p className="text-muted-foreground mb-6 leading-relaxed">
+                    {project.description[language]}
+                  </p> */}
+
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                    aria-label="Live demo"
+                  >
+                    <ExternalLink size={20} />
+                  </a>
+
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 text-xs font-medium text-primary bg-primary/10 rounded-full"
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </div>
-                  {/* <ProjectCard
-                      project={project}
-                      // language={language}
-                      index={index}
-                    /> */}
-                </>
-              )}
-            </div>
-          </>
-        ))}
-      </div>
+                </Card>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
     </section>
   );
 };

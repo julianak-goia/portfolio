@@ -23,7 +23,7 @@ const projects = [
     },
     tech: ["Vue.js", "Nuxt.js", "JavaScript", "Bootstrap", "Laravel"],
     github: "https://github.com",
-    live: "https://example.com",
+    live: "https://leanlearn.com.br/",
     image: "/images/lean-responsive.jpg",
   },
   {
@@ -35,8 +35,8 @@ const projects = [
     },
     tech: ["HTML", "Javascript", "CSS", "PHP"],
     github: "https://github.com",
-    live: "https://example.com",
-    image: "/images/teyaus.png",
+    live: "https://teya.us/",
+    image: "/images/teya-responsive.jpg",
   },
   {
     title: "Figa Marcenaria",
@@ -47,8 +47,8 @@ const projects = [
     },
     tech: ["HTML", "Javascript", "CSS", "PHP"],
     github: "https://github.com",
-    live: "https://example.com",
-    image: "/images/figa-marcenaria.png",
+    live: "https://www.figamarcenaria.com.br/",
+    image: "/images/figa-responsive.jpg",
   },
   {
     title: "Viatech",
@@ -57,7 +57,7 @@ const projects = [
       en: "Social media clone with feed, posts, likes, and follow system.",
       ja: "フィード、投稿、いいね、フォローシステムを備えたソーシャルメディアクローン。",
     },
-    tech: ["React", "Firebase", "Tailwind", "Zustand"],
+    tech: ["React", "Next.js", "Tailwind", "Laravel"],
     github: "https://github.com",
     live: "https://example.com",
     image: "/images/viatech-ipad.png",
@@ -155,26 +155,27 @@ export const Projects = () => {
                       src={project.image}
                       alt={project.title}
                       fill
-                      className="object-contain rounded-2xl"
+                      className="object-cover rounded-2xl"
                     />
                   </CardContent>
-                  <h3 className="text-xl font-display font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h3>
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-xl font-display font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                      {project.title}
+                    </h3>
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                      aria-label="Live demo"
+                    >
+                      <ExternalLink size={20} />
+                    </a>
+                  </div>
 
                   {/* <p className="text-muted-foreground mb-6 leading-relaxed">
                     {project.description[language]}
                   </p> */}
-
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                    aria-label="Live demo"
-                  >
-                    <ExternalLink size={20} />
-                  </a>
 
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech) => (

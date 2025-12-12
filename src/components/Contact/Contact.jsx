@@ -1,9 +1,9 @@
 "use client";
 
-// import { useLanguage } from '@/i18n/LanguageContext';
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { GithubLogo, LinkedinLogo, EnvelopeSimple } from "phosphor-react";
+import Link from "next/link";
 
 const socialLinks = [
   {
@@ -24,9 +24,9 @@ const socialLinks = [
 ];
 
 export const Contact = () => {
-  //   const { t } = useLanguage();
+  const t = useTranslations("contact");
   const { ref: titleRef, isRevealed: titleRevealed } = useScrollReveal();
-  const { ref: ctaRef, isRevealed: ctaRevealed } = useScrollReveal();
+  // const { ref: ctaRef, isRevealed: ctaRevealed } = useScrollReveal();
   const { ref: socialRef, isRevealed: socialRevealed } = useScrollReveal();
 
   return (
@@ -39,11 +39,11 @@ export const Contact = () => {
           >
             <h2 className="section-title">
               <span className="text-gradient font-semibold text-3xl">
-                Contato
+                {t("title")}
               </span>
             </h2>
             <p className="text-xl text-muted-foreground mb-4">
-              Vamos trabalhar juntos?
+              {t("subtitle")}
             </p>
           </div>
 

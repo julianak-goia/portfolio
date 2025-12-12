@@ -1,0 +1,50 @@
+{
+  "navbar": {
+    "brand": "Portfolio",
+    "links": {
+      "about": "Sobre",
+      "skills": "Habilidades",
+      "projects": "Projetos",
+      "contact": "Contato"
+    },
+    "language": {
+      "label": "Idioma",
+      "pt": "PT",
+      "en": "EN",
+      "jp": "JP"
+    }
+  },
+  "hero": {
+    "hello": "👋 Olá, eu sou",
+    "role": "Desenvolvedora Frontend",
+    "description": "Aplico minha experiência em código e UI Design para criar soluções digitais com foco em acessibilidade, performance e design moderno."
+  },
+  "about": {
+    "greeting": "Muito prazer",
+    "role": "Desenvolvedora Frontend",
+    "bio1": "Atuo há 4 anos como desenvolvedora frontend apaixonada por criar interfaces bonitas e funcionais. Com experiência em React, Vue.js, JavaScript e outras tecnologias, transformo ideias em realidade digital.",
+    "bio2": "Atualmente estudo Análise e Desenvolvimento de Sistemas e também me dedico à área de UI Design, que complemento com estudos independentes. Essa combinação de código e design me permite transformar ideias em experiências digitais claras, responsivas e bem estruturadas. Meu foco é evoluir continuamente, aprofundando meus conhecimentos em código e design para criar soluções que fortalecem a presença digital de marcas e negócios."
+  },
+  "projects": {
+    "title": "Projetos",
+    "subtitle": "Alguns trabalhos que participei",
+    "items": {
+      "leanLearn": {
+        "description": "Plataforma LMS (Learning Management System). Permite a empresas e instituições de ensino criar, gerenciar, distribuir e monitorar cursos e treinamentos online. Essa plataforma digital organiza o conteúdo educacional, facilita o acesso dos alunos, permite aplicar avaliações, emitir certificados e acompanhar o progresso e desempenho dos usuários."
+      },
+      "teya": {
+        "description": "Site para a empresa Teya, uma plataforma que enfatiza cultura de aprendizagem contínua, conectando pessoas, ideias, conteúdos e ferramentas para cocriar soluções inovadoras para indivíduos e empresas."
+      },
+      "figaMarcenaria": {
+        "description": "Site para a empresa que faz projetos e fabricação de móveis e artigos de decoração."
+      },
+      "viatech": {
+        "description": "Clone de rede social com feed, posts, likes e sistema de seguir."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contato",
+    "subtitle": "Vamos trabalhar juntos?"
+  }
+}

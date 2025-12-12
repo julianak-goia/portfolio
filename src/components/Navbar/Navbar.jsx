@@ -1,13 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
-// import { useLanguage } from '@/i18n/LanguageContext';
-// import { LanguageSwitcher } from './LanguageSwitcher';
-// import { ThemeToggle } from './ThemeToggle';
+import { useTranslations } from "next-intl";
+import { useState, useEffect, useMemo } from "react";
 import { Menu, X } from "lucide-react";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher/LanguageSwitcher";
 
 export const Navbar = () => {
-  //   const { t } = useLanguage();
+  const t = useTranslations("navbar");
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -19,12 +18,15 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { href: "#about", label: "about" },
-    { href: "#skills", label: "skills" },
-    { href: "#projects", label: "projects" },
-    { href: "#contact", label: "contact" },
-  ];
+  const navLinks = useMemo(
+    () => [
+      { href: "#about", label: t("links.about") },
+      { href: "#skills", label: t("links.skills") },
+      { href: "#projects", label: t("links.projects") },
+      { href: "#contact", label: t("links.contact") },
+    ],
+    [t]
+  );
 
   return (
     <nav
@@ -35,7 +37,7 @@ export const Navbar = () => {
       <div className="max-w-6xl mx-auto py-4">
         <div className="flex items-center justify-between">
           <a href="#" className="text-2xl font-display font-bold text-gradient">
-            Portfolio
+            {t("brand")}
           </a>
 
           {/* Desktop Navigation */}
@@ -49,15 +51,15 @@ export const Navbar = () => {
                 {link.label}
               </a>
             ))}
-            {/* <LanguageSwitcher /> */}
-            {/* <ThemeToggle /> */}
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center gap-3">
-            {/* <ThemeToggle /> */}
+            <LanguageSwitcher />
             <button
               className="text-foreground"
+              aria-label="Toggle menu"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}

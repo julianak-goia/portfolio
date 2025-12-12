@@ -1,10 +1,11 @@
-// import { useLanguage } from '@/i18n/LanguageContext';
+"use client";
+import { useTranslations } from "next-intl";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import AnimatedOrb from "../AnimatedOrb/AnimatedOrb";
 import Image from "next/image";
 
 export const Hero = () => {
-  // const { t } = useLanguage();
+  const t = useTranslations("hero");
 
   return (
     <section className="bg-gray-100 w-full">
@@ -14,7 +15,7 @@ export const Hero = () => {
             className="font-semibold text-lg mb-4 animate-fade-up opacity-0"
             style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}
           >
-            👋 Olá, eu sou
+            {t("hello")}
           </p>
 
           <h1
@@ -28,15 +29,14 @@ export const Hero = () => {
             className="text-2xl md:text-3xl lg:text-3xl text-muted-foreground font-display mb-8 animate-fade-up opacity-0"
             style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
           >
-            Desenvolvedora Frontend
+            {t("role")}
           </h2>
 
           <p
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-12 animate-fade-up opacity-0"
             style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
           >
-            Aplico minha experiência em código e UI Design para criar soluções
-            digitais com foco em acessibilidade, performance e design moderno.
+            {t("description")}
           </p>
           {/* <p
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 animate-fade-up opacity-0"

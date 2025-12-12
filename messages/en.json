@@ -1,0 +1,50 @@
+{
+  "navbar": {
+    "brand": "Portfolio",
+    "links": {
+      "about": "About",
+      "skills": "Skills",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "language": {
+      "label": "Language",
+      "pt": "PT",
+      "en": "EN",
+      "jp": "JP"
+    }
+  },
+  "hero": {
+    "hello": "👋 Hi, I'm",
+    "role": "Frontend Developer",
+    "description": "I use my experience in code and UI Design to build digital solutions focused on accessibility, performance, and modern design."
+  },
+  "about": {
+    "greeting": "Nice to meet you",
+    "role": "Frontend Developer",
+    "bio1": "I’ve been working for 4 years as a frontend developer, passionate about creating beautiful and functional interfaces. With experience in React, Vue.js, JavaScript, and other technologies, I turn ideas into digital reality.",
+    "bio2": "I’m currently studying Systems Analysis and Development and I also focus on UI Design, which I complement with independent studies. This combination of code and design helps me turn ideas into clear, responsive, and well-structured digital experiences. My goal is to continuously grow—deepening my knowledge in both code and design—to build solutions that strengthen the digital presence of brands and businesses."
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Some projects I’ve worked on",
+    "items": {
+      "leanLearn": {
+        "description": "LMS Platform (Learning Management System). It allows companies and educational institutions to create, manage, distribute, and monitor online courses and training programs. This digital platform organizes educational content, facilitates student access, enables assessments, issues certificates, and tracks users’ progress and performance."
+      },
+      "teya": {
+        "description": "Website for Teya, a platform that emphasizes a culture of continuous learning, connecting people, ideas, content, and tools to co-create innovative solutions for individuals and companies."
+      },
+      "figaMarcenaria": {
+        "description": "Website for a company that designs and manufactures furniture and décor items."
+      },
+      "viatech": {
+        "description": "Social media clone with feed, posts, likes, and a follow system."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Shall we work together?"
+  }
+}

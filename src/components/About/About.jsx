@@ -1,21 +1,21 @@
 "use client";
 
-// import { useLanguage } from '@/i18n/LanguageContext';
+import { useTranslations } from "next-intl";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Code2, Palette, Zap } from "lucide-react";
 import Image from "next/image";
 
 export const About = () => {
-  //   const { t } = useLanguage();
-  const { ref: titleRef, isRevealed: titleRevealed } = useScrollReveal();
+  const t = useTranslations("about");
+  // const { ref: titleRef, isRevealed: titleRevealed } = useScrollReveal();
   const { ref: imageRef, isRevealed: imageRevealed } = useScrollReveal();
   const { ref: textRef, isRevealed: textRevealed } = useScrollReveal();
 
-  const highlights = [
-    { icon: Code2, title: "Clean Code", color: "text-primary" },
-    { icon: Palette, title: "UI/UX Design", color: "text-primary" },
-    { icon: Zap, title: "Performance", color: "text-primary" },
-  ];
+  // const highlights = [
+  //   { icon: Code2, title: "Clean Code", color: "text-primary" },
+  //   { icon: Palette, title: "UI/UX Design", color: "text-primary" },
+  //   { icon: Zap, title: "Performance", color: "text-primary" },
+  // ];
 
   return (
     <section id="about" className="max-w-6xl mx-auto py-24 relative">
@@ -55,27 +55,18 @@ export const About = () => {
             textRevealed ? "revealed" : ""
           }`}
         >
-          <h3 className="font-semibold text-xl">Muito prazer</h3>
+          <h3 className="font-semibold text-xl">{t("greeting")}</h3>
           <div>
             <h1 className="text-3xl font-semibold">Juliana Kaori Goia</h1>
-            <p className="text-lg">Desenvolvedora Frontend</p>
+            <p className="text-lg">{t("role")}</p>
           </div>
 
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Atuo há 4 anos como desenvolvedora frontend apaixonada por criar
-            interfaces bonitas e funcionais. Com experiência em React, Vue.js,
-            JavaScript e outras tecnologias, transformo ideias em realidade
-            digital.
+            {t("bio1")}
           </p>
 
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Atualmente estudo Análise e Desenvolvimento de Sistemas e também me
-            dedico à área de UI Design, que complemento com estudos
-            independentes. Essa combinação de código e design me permite
-            transformar ideias em experiências digitais claras, responsivas e
-            bem estruturadas. Meu foco é evoluir continuamente, aprofundando
-            meus conhecimentos em código e design para criar soluções que
-            fortalecem a presença digital de marcas e negócios.
+            {t("bio2")}
           </p>
 
           <div className="flex items-center gap-8">

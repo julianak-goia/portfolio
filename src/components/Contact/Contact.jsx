@@ -26,7 +26,6 @@ const socialLinks = [
 export const Contact = () => {
   const t = useTranslations("contact");
   const { ref: titleRef, isRevealed: titleRevealed } = useScrollReveal();
-  // const { ref: ctaRef, isRevealed: ctaRevealed } = useScrollReveal();
   const { ref: socialRef, isRevealed: socialRevealed } = useScrollReveal();
 
   return (
@@ -46,21 +45,6 @@ export const Contact = () => {
               {t("subtitle")}
             </p>
           </div>
-
-          {/* Email CTA */}
-          {/* <div
-            ref={ctaRef}
-            className={`scroll-reveal-scale ${ctaRevealed ? "revealed" : ""}`}
-          >
-            <a
-              href="mailto:goia.julianakg@gmail.com"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:glow transition-all duration-300 hover:scale-105 mb-12"
-            >
-              <Mail size={20} />
-              <span>goia.julianakg@gmail.com</span>
-              <Send size={18} />
-            </a>
-          </div> */}
 
           {/* Social Links */}
           <div

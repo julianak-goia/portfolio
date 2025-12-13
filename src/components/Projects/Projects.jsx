@@ -48,63 +48,6 @@ const projects = [
   },
 ];
 
-// const ProjectCard = ({ project, language, index }) => {
-//   const { ref, isRevealed } = useScrollReveal({ threshold: 0.1 });
-
-//   return (
-//     <article
-//       ref={ref}
-//       className={`group p-6 rounded-2xl card-gradient border border-border hover:border-primary/50 transition-all duration-300 scroll-reveal ${
-//         isRevealed ? "revealed" : ""
-//       }`}
-//       style={{ transitionDelay: `${index * 100}ms` }}
-//     >
-//       <div className="flex items-start justify-between mb-4">
-//         <Folder className="text-primary" size={40} />
-//         <div className="flex gap-3">
-//           <a
-//             href={project.github}
-//             target="_blank"
-//             rel="noopener noreferrer"
-//             className="text-muted-foreground hover:text-primary transition-colors"
-//             aria-label="GitHub"
-//           >
-//             <Github size={20} />
-//           </a>
-//           <a
-//             href={project.live}
-//             target="_blank"
-//             rel="noopener noreferrer"
-//             className="text-muted-foreground hover:text-primary transition-colors"
-//             aria-label="Live demo"
-//           >
-//             <ExternalLink size={20} />
-//           </a>
-//         </div>
-//       </div>
-
-//       <h3 className="text-xl font-display font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
-//         {project.title}
-//       </h3>
-
-//       <p className="text-muted-foreground mb-6 leading-relaxed">
-//         {project.description[language]}
-//       </p>
-
-//       <div className="flex flex-wrap gap-2">
-//         {project.tech.map((tech) => (
-//           <span
-//             key={tech}
-//             className="px-3 py-1 text-xs font-medium text-primary bg-primary/10 rounded-full"
-//           >
-//             {tech}
-//           </span>
-//         ))}
-//       </div>
-//     </article>
-//   );
-// };
-
 export const Projects = () => {
   const t = useTranslations("projects");
 
@@ -156,10 +99,6 @@ export const Projects = () => {
                       <ExternalLink size={20} />
                     </a>
                   </div>
-
-                  {/* <p className="text-muted-foreground mb-6 leading-relaxed">
-                    {project.description[language]}
-                  </p> */}
 
                   <p className="text-muted-foreground mb-6 leading-relaxed">
                     {t(`items.${project.key}.description`)}

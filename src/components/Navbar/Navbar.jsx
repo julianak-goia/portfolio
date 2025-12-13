@@ -80,7 +80,7 @@ export const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              {/* <LanguageSwitcher /> */}
+              <LanguageSwitcher />
             </div>
           </div>
         )}

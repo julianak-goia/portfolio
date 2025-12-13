@@ -1,27 +1,24 @@
-// import { useLanguage } from '@/i18n/LanguageContext';
-
+"use client";
+import { useTranslations } from "next-intl";
 export const Footer = () => {
-  //   const { t } = useLanguage();
+  const t = useTranslations("footer");
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-8 border-t border-border w-full">
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground">
-            © {currentYear} Portfolio. Todos os direitos reservados
-          </p>
-          <p className="text-sm text-muted-foreground">
-            Projetado com <span className="text-primary">♥</span> utilizando
-            React & JavaScript
-          </p>
-
-          {/* <p className="text-sm text-muted-foreground">
-            Built with <span className="text-primary">♥</span> using React &
-            JavaScript
-          </p> */}
+    <div className="py-8 border-t border-border w-full">
+      <footer className="max-w-6xl mx-auto ">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-sm text-muted-foreground">
+              © {currentYear} Portfolio.
+            </p>
+            <p className="text-sm text-muted-foreground">
+              {t("text1")} <span className="text-primary">♥</span> {t("text2")}{" "}
+              - React & JavaScript
+            </p>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   );
 };

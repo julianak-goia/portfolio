@@ -46,5 +46,9 @@
   "contact": {
     "title": "Contact",
     "subtitle": "Shall we work together?"
+  },
+  "footer": {
+    "text1": "Built with",
+    "text2": "using"
   }
 }

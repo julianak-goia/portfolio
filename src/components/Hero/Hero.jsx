@@ -1,6 +1,6 @@
 "use client";
 import { useTranslations } from "next-intl";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown } from "phosphor-react";
 import AnimatedOrb from "../AnimatedOrb/AnimatedOrb";
 import Image from "next/image";
 
@@ -38,62 +38,6 @@ export const Hero = () => {
           >
             {t("description")}
           </p>
-          {/* <p
-          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 animate-fade-up opacity-0"
-          style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
-        >
-          Do código ao design, aplico minha experiência em HTML, CSS, JavaScript
-          e UI/UX para criar soluções digitais completas. Busco sempre o
-          equilíbrio entre funcionalidade, estética e experiência, garantindo
-          que cada projeto seja útil e envolvente.
-        </p> */}
-
-          {/* <div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-up opacity-0"
-          style={{ animationDelay: "0.5s", animationFillMode: "forwards" }}
-        >
-          <a
-            href="#projects"
-            className="px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:glow transition-all duration-300 hover:scale-105"
-          >
-            hero.cta
-          </a>
-          <a
-            href="#contact"
-            className="px-8 py-4 border border-border text-foreground font-semibold rounded-full hover:bg-secondary transition-all duration-300"
-          >
-            hero.contact
-          </a>
-        </div> */}
-
-          {/* Social Links */}
-          {/* <div
-          className="flex items-center justify-center gap-6 animate-fade-up opacity-0"
-          style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}
-        >
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
-          >
-            <Github size={24} />
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
-          >
-            <Linkedin size={24} />
-          </a>
-          <a
-            href="mailto:email@example.com"
-            className="p-3 rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
-          >
-            <Mail size={24} />
-          </a>
-        </div> */}
         </div>
         {/* Right Content - Photo with Orb */}
         <div
@@ -113,14 +57,6 @@ export const Hero = () => {
                 fill
                 className="object-contain rounded-2xl"
               />
-              {/* <div className="text-center p-8">
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center">
-                  <span className="text-4xl">📷</span>
-                </div>
-                <p className="text-muted-foreground text-sm">
-                  Adicione sua foto aqui
-                </p>
-              </div> */}
             </div>
           </div>
         </div>

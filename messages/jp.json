@@ -46,5 +46,9 @@
   "contact": {
     "title": "お問い合わせ",
     "subtitle": "一緒にお仕事しませんか？"
+  },
+  "footer": {
+    "text1": "Built with",
+    "text2": "using"
   }
 }

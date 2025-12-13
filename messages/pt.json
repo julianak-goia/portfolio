@@ -46,5 +46,9 @@
   "contact": {
     "title": "Contato",
     "subtitle": "Vamos trabalhar juntos?"
+  },
+  "footer": {
+    "text1": "Projetado com",
+    "text2": "utilizando"
   }
 }

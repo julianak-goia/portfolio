@@ -1,7 +1,8 @@
 "use client";
 
 import { useLocale } from "next-intl";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter, usePathname } from "../../../i18n/routing";
+import { useTransition } from "react";
 import {
   Select,
   SelectContent,
@@ -16,31 +17,26 @@ const LOCALES = [
   { value: "jp", label: "JP" },
 ];
 
-function replaceLocaleInPath(pathname, nextLocale) {
-  const path = pathname || "/";
-  const parts = path.split("/");
-
-  if (parts.length > 1 && LOCALES.some((l) => l.value === parts[1])) {
-    parts[1] = nextLocale;
-    return parts.join("/") || "/";
-  }
-
-  return `/${nextLocale}${path.startsWith("/") ? "" : "/"}${path}`;
-}
-
 export const LanguageSwitcher = () => {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
+  const [isPending, startTransition] = useTransition();
 
   const handleChange = (nextLocale) => {
     if (nextLocale === locale) return;
-    const nextPath = replaceLocaleInPath(pathname, nextLocale);
-    router.push(nextPath);
+
+    startTransition(() => {
+      const localeRegex = new RegExp(
+        `^/(?:${LOCALES.map((l) => l.value).join("|")})(?=/|$)`
+      );
+      const cleanedPathname = pathname.replace(localeRegex, "");
+      router.replace(cleanedPathname || "/", { locale: nextLocale });
+    });
   };
 
   return (
-    <Select value={locale} onValueChange={handleChange}>
+    <Select value={locale} onValueChange={handleChange} disabled={isPending}>
       <SelectTrigger className="w-20 h-9">
         <SelectValue />
       </SelectTrigger>

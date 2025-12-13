@@ -21,7 +21,6 @@ export const Navbar = () => {
   const navLinks = useMemo(
     () => [
       { href: "#about", label: t("links.about") },
-      { href: "#skills", label: t("links.skills") },
       { href: "#projects", label: t("links.projects") },
       { href: "#contact", label: t("links.contact") },
     ],

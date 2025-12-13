@@ -1,9 +1,26 @@
 "use client";
 
+import { GithubLogo, LinkedinLogo } from "phosphor-react";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Code2, Palette, Zap } from "lucide-react";
 import Image from "next/image";
+
+const socialLinks = [
+  {
+    icon: GithubLogo,
+    href: "https://github.com/julianak-goia",
+    label: "GitHub",
+    link: "/julianak-goia",
+  },
+  {
+    icon: LinkedinLogo,
+    href: "https://www.linkedin.com/in/juliana-goia/",
+    label: "LinkedIn",
+    link: "/juliana-goia",
+  },
+];
 
 export const About = () => {
   const t = useTranslations("about");
@@ -69,7 +86,7 @@ export const About = () => {
             {t("bio2")}
           </p>
 
-          <div className="flex items-center gap-8">
+          {/* <div className="flex items-center gap-8">
             <div className="flex items-center gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -126,7 +143,26 @@ export const About = () => {
                 <rect x="2" y="4" width="20" height="16" rx="2" />
               </svg>
               <p className="font-semibold">goia.julianakg@gmail.com</p>
-            </div> */}
+            </div> 
+          </div> */}
+          <div className="flex items-center gap-8">
+            {socialLinks.map((social, index) => (
+              <Link
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.label}
+              >
+                <div
+                  className="flex items-center gap-2"
+                  style={{ transitionDelay: `${index * 100}ms` }}
+                >
+                  <social.icon className="text-gray-400" size={26} />
+                  <p className="font-semibold text-gray-400">{social.link}</p>
+                </div>
+              </Link>
+            ))}
           </div>
 
           {/* Highlights */}

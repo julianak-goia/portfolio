@@ -39,13 +39,29 @@ const projects = [
     image: "/images/figa-responsive.jpg",
   },
   {
-    key: "viatech",
-    title: "Viatech",
-    tech: ["React", "Next.js", "Tailwind", "Laravel"],
+    key: "vinx",
+    title: "Vinx Incorporadora Ltda",
+    tech: ["HTML", "Javascript", "CSS"],
     github: "https://github.com",
-    live: "https://example.com",
-    image: "/images/viatech-ipad.png",
+    live: "https://vinx.com.br/",
+    image: "/images/vinx-01.png",
   },
+  {
+    key: "usitools",
+    title: "Usitools",
+    tech: ["HTML", "Javascript", "CSS", "PHP"],
+    github: "https://github.com",
+    live: "https://usitools.com.br/index.html",
+    image: "/images/usitools.png",
+  },
+  // {
+  //   key: "viatech",
+  //   title: "Viatech",
+  //   tech: ["React", "Next.js", "Tailwind", "Laravel"],
+  //   github: "https://github.com",
+  //   live: "https://example.com",
+  //   image: "/images/viatech-ipad.png",
+  // },
 ];
 
 export const Projects = () => {
@@ -77,7 +93,7 @@ export const Projects = () => {
             <CarouselItem key={project.title}>
               <div className="p-1">
                 <Card className="p-6 border-0 shadow-md">
-                  <CardContent className="relative h-[600px] p-0">
+                  <CardContent className="relative h-[360px] sm:h-[420px] md:h-[520px] lg:h-[600px] p-0">
                     <Image
                       src={project.image}
                       alt={project.title}
@@ -96,7 +112,10 @@ export const Projects = () => {
                       className="text-muted-foreground hover:text-primary transition-colors"
                       aria-label="Live demo"
                     >
-                      <ExternalLink size={20} />
+                      <div className="flex gap-2">
+                        Access
+                        <ExternalLink size={20} />
+                      </div>
                     </a>
                   </div>
 

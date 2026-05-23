@@ -14,7 +14,7 @@ import {
 const LOCALES = [
   { value: "pt", label: "PT" },
   { value: "en", label: "EN" },
-  { value: "jp", label: "JP" },
+  // { value: "jp", label: "JP" },
 ];
 
 export const LanguageSwitcher = () => {
@@ -28,7 +28,7 @@ export const LanguageSwitcher = () => {
 
     startTransition(() => {
       const localeRegex = new RegExp(
-        `^/(?:${LOCALES.map((l) => l.value).join("|")})(?=/|$)`
+        `^/(?:${LOCALES.map((l) => l.value).join("|")})(?=/|$)`,
       );
       const cleanedPathname = pathname.replace(localeRegex, "");
       router.replace(cleanedPathname || "/", { locale: nextLocale });

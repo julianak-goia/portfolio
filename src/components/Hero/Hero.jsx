@@ -48,7 +48,7 @@ export const Hero = () => {
           <AnimatedOrb />
 
           {/* Profile Photo Placeholder */}
-          <div className="relative z-10 w-[280px] h-[350px] md:w-[350px] md:h-[420px] lg:w-[400px] lg:h-[600px]">
+          <div className="relative z-10 w-full max-w-[220px] sm:max-w-[280px] md:max-w-[350px] lg:max-w-[400px] h-[260px] sm:h-[350px] md:h-[420px] lg:h-[600px]">
             <div className="w-full h-full flex items-center justify-center overflow-hidden">
               {/* Replace this div with your actual photo  */}
               <Image

@@ -20,11 +20,11 @@ export const Navbar = () => {
 
   const navLinks = useMemo(
     () => [
-      { href: "#about", label: t("links.about") },
+      // { href: "#about", label: t("links.about") },
       { href: "#projects", label: t("links.projects") },
       { href: "#contact", label: t("links.contact") },
     ],
-    [t]
+    [t],
   );
 
   return (
@@ -66,25 +66,26 @@ export const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-border animate-fade-in shadow-lg">
-            <div className="flex flex-col items-center gap-4 py-6">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="nav-link font-medium text-lg"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
-              ))}
-              <LanguageSwitcher />
-            </div>
-          </div>
-        )}
+        {/* Mobile Navigation moved below to span full viewport width */}
       </div>
+      {/* Mobile Navigation */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden fixed top-16 left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-border animate-fade-in shadow-lg z-40">
+          <div className="flex flex-col items-center gap-4 py-6">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="nav-link font-medium text-lg"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {link.label}
+              </a>
+            ))}
+            <LanguageSwitcher />
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

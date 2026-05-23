@@ -1,8 +1,8 @@
 const AnimatedOrb = () => {
   return (
     <div
-      className="absolute w-[350px] h-[350px] md:w-[450px] md:h-[500px] lg:w-[500px] lg:h-[550px] 
-                 animate-orb-float blur-sm"
+      className="absolute w-[180px] sm:w-[260px] md:w-[450px] h-[180px] sm:h-[260px] md:h-[500px] lg:w-[500px] lg:h-[550px] 
+                 animate-orb-float blur-sm pointer-events-none"
       style={{
         background: `linear-gradient(
           135deg,

@@ -17,7 +17,7 @@
   "hero": {
     "hello": "👋 Olá, eu sou",
     "role": "Desenvolvedora Frontend",
-    "description": "Aplico minha experiência em código e UI Design para criar soluções digitais com foco em acessibilidade, performance e design moderno."
+    "description": "Crio interfaces web modernas, acessíveis e focadas em experiência do usuário, unindo desenvolvimento frontend e UI design"
   },
   "about": {
     "greeting": "Muito prazer",
@@ -37,6 +37,12 @@
       },
       "figaMarcenaria": {
         "description": "Site para a empresa que faz projetos e fabricação de móveis e artigos de decoração."
+      },
+      "vinx": {
+        "description": "Empresa brasileira de incorporação imobiliária e construção civil focada em projetos residenciais e desenvolvimento urbano. A empresa atua com incorporação imobiliária, construção, serviços de engenharia e projetos habitacionais em São Paulo, com foco em criar espaços modernos e acessíveis para moradia."
+      },
+      "usitools": {
+        "description": "Empresa especializada em ferramentas industriais, usinagem e equipamentos para máquinas-ferramenta. Oferece itens como ferramentas de corte, acessórios para usinagem, metrologia e máquinas industriais para o setor metalúrgico e de manufatura."
       },
       "viatech": {
         "description": "Clone de rede social com feed, posts, likes e sistema de seguir."

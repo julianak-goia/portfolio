@@ -32,17 +32,17 @@ export const About = () => {
         {/* Image/Avatar placeholder */}
         <div
           ref={imageRef}
-          className={`relative scroll-reveal-left col-span-6 ${
+          className={`relative scroll-reveal-left col-span-12 md:col-span-6 ${
             imageRevealed ? "revealed" : ""
           }`}
         >
-          <div className="w-[500px] h-[700px] rounded-2xl">
+          <div className="w-full max-w-[500px] aspect-[4/5] md:aspect-[5/7] rounded-2xl overflow-hidden">
             <div className="relative w-full h-full">
               <Image
                 src="/images/juliana.jpg"
                 alt="profile"
                 fill
-                className="object-cover rounded-2xl "
+                className="object-cover rounded-2xl"
               />
             </div>
           </div>
@@ -51,7 +51,7 @@ export const About = () => {
         {/* Text content */}
         <div
           ref={textRef}
-          className={`space-y-6 scroll-reveal-right col-span-6 ${
+          className={`space-y-6 scroll-reveal-right col-span-12 md:col-span-6 ${
             textRevealed ? "revealed" : ""
           }`}
         >

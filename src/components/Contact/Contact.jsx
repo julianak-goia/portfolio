@@ -16,11 +16,11 @@ const socialLinks = [
     href: "https://www.linkedin.com/in/juliana-goia/",
     label: "LinkedIn",
   },
-  {
-    icon: EnvelopeSimple,
-    href: "mailto:goia.julianakg@gmail.com",
-    label: "Twitter",
-  },
+  // {
+  //   icon: EnvelopeSimple,
+  //   href: "mailto:goia.julianakg@gmail.com",
+  //   label: "Twitter",
+  // },
 ];
 
 export const Contact = () => {

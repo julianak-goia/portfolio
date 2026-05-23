@@ -11,7 +11,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen items-center justify-center">
       <Navbar />
       <Hero />
-      <About />
+      {/* <About /> */}
       <Projects />
       <Contact />
       <Footer />

@@ -17,7 +17,7 @@
   "hero": {
     "hello": "👋 Hi, I'm",
     "role": "Frontend Developer",
-    "description": "I use my experience in code and UI Design to build digital solutions focused on accessibility, performance, and modern design."
+    "description": "I create modern, accessible web interfaces focused on user experience, combining frontend development and UI design."
   },
   "about": {
     "greeting": "Nice to meet you",
@@ -37,6 +37,12 @@
       },
       "figaMarcenaria": {
         "description": "Website for a company that designs and manufactures furniture and décor items."
+      },
+      "vinx": {
+        "description": "Brazilian real estate development and construction company focused on residential projects and urban development. The company works with real estate incorporation, construction, engineering services, and housing projects in São Paulo, aiming to create modern and accessible living spaces."
+      },
+      "usitools": {
+        "description": "Company specialized in industrial tools, machining solutions, and equipment for machine tools. It provides products such as cutting tools, machining accessories, metrology equipment, and industrial machines for the metalworking and manufacturing sectors."
       },
       "viatech": {
         "description": "Social media clone with feed, posts, likes, and a follow system."

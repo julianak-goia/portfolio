@@ -8,7 +8,7 @@ export const Hero = () => {
   const t = useTranslations("hero");
 
   return (
-    <section className="bg-gray-100 w-full">
+    <section className="bg-gray-50 w-full">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 items-center gap-6 min-h-screen relative">
         <div>
           <p
